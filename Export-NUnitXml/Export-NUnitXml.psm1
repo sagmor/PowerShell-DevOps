@@ -26,9 +26,9 @@
     $MachineName = $env:COMPUTERNAME
     $Cwd = $pwd.Path
     $UserDomain = $env:USERDOMAIN
-    $OS = Get-CimInstance -ClassName Win32_OperatingSystem
-    $Platform = $OS.Caption
-    $OSVersion = $OS.Version
+    # $OS = Get-CimInstance -ClassName Win32_OperatingSystem
+    $Platform = "Unknown" # $OS.Caption
+    $OSVersion = "Unknown" # $OS.Version
     $ClrVersion = $PSVersionTable.CLRVersion.ToString()
     $CurrentCulture = (Get-Culture).Name
     $UICulture = (Get-UICulture).Name
